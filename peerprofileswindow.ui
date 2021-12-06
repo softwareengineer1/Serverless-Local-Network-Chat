@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>peerprofileswindow</class>
+ <widget class="QMainWindow" name="peerprofileswindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Peer Authoritative Profiles</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="11" column="1">
+     <widget class="QLabel" name="labelUdpPorts">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>UDP Ports Range:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QLabel" name="imageProfile">
+      <property name="maximumSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resource.qrc">:/rsrc/blankprofileimage</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLabel" name="labelProfileName">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Your Name:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QLabel" name="labelProfileId">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Your Id:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QPushButton" name="btnBrowse">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="3">
+     <widget class="QCheckBox" name="chkClearOffline">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Clear offline messages  too on clear</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="3">
+     <widget class="QComboBox" name="broadcastAddr">
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>255.255.255.255</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="btnBack">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1">
+     <widget class="QLabel" name="labelBroadcastAddr">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>UDP Broadcast Addr:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLabel" name="labelProfileIdKey">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Your Id Key:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3" colspan="5">
+     <widget class="QLineEdit" name="boxId"/>
+    </item>
+    <item row="23" column="1" colspan="7">
+     <widget class="QTreeWidget" name="profilesTree">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectItems</enum>
+      </property>
+      <property name="indentation">
+       <number>0</number>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <attribute name="headerMinimumSectionSize">
+       <number>100</number>
+      </attribute>
+      <attribute name="headerDefaultSectionSize">
+       <number>100</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Profile Image</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Profile Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Profile Id</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Profile Key</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item row="13" column="3">
+     <widget class="QCheckBox" name="chkIP">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Show my Network Node Address On Chat View</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="21" column="1" colspan="7">
+     <widget class="QPushButton" name="btnForceUpdate">
+      <property name="text">
+       <string>Update My Profile</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3" colspan="5">
+     <widget class="QLineEdit" name="boxIdKey"/>
+    </item>
+    <item row="11" column="3">
+     <widget class="QLineEdit" name="udpBegin">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QPushButton" name="btnSetFromURL">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Set From URL</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="6">
+     <widget class="QPushButton" name="btnRegenerate">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Regenerate</string>
+      </property>
+     </widget>
+    </item>
+    <item row="22" column="1" colspan="7">
+     <widget class="QPushButton" name="btnDelete">
+      <property name="text">
+       <string>Delete Selected Profile</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="labelProfileImage">
+      <property name="text">
+       <string>Your Image:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3" colspan="3">
+     <widget class="QLineEdit" name="boxName"/>
+    </item>
+    <item row="15" column="3">
+     <widget class="QCheckBox" name="chkAdvanced">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Show Advanced</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLineEdit" name="boxURL"/>
+    </item>
+    <item row="12" column="3">
+     <widget class="QLineEdit" name="udpEnd">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>100</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

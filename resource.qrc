@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/rsrc">
+        <file alias="blankprofileimage">blankavatar.png</file>
+        <file alias="chat">chat.png</file>
+        <file alias="gear">gear1.png</file>
+        <file alias="mail">mail.png</file>
+        <file alias="greendot1">greendot1.png</file>
+        <file alias="greendot2">greendot2.png</file>
+        <file alias="greydot1">greydot1.png</file>
+        <file alias="people">people.png</file>
+        <file alias="clearicon">clearicon.png</file>
+    </qresource>
+</RCC>
